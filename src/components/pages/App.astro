@@ -1,54 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import ArrowRight from '@/icons/arrow-right.astro'
-import ArrowDown from '@/icons/arrow-down.astro'
+import Hero from '../Hero.astro';
 
-import { getI18N } from "@/i18n";
-
-const { currentLocale  } = Astro
-const i18n = getI18N({ currentLocale })
 ---
 
 <Layout title='devoncats | Fullstack Developer'>
 	<main id="app" class="px-36 pt-36 pb-64 h-[95vh] flex flex-col justify-around">
-        <section class="flex flex-col items-center gap-2">
-            <picture>
-                <img
-                    src="https://avatars.githubusercontent.com/u/136870539?s=400&u=97a6d31363d803209e0116d59dfccfabe8dd68a8&v=4"
-                    alt="devoncats logo"
-                    class="size-16 shadow-lg rounded-full"
-                />
-            </picture>
-
-            <h2 class="text-center text-sm text-gray-800">{ i18n.HERO.GREETING } <span class="font-semibold">devoncats</span></h2>
-        </section>
-
-       
-
-        <section class="flex justify-center">
-            <h1 class="text-7xl w-[60vw] font-serif text-center z-10">{ i18n.HERO.MAIN_MESSAGE }</h1>
-        </section>
-
-        <section class="flex flex-col items-center gap-6">
-             <p class="mt-4 w-96 text-center text-gray-800">{ i18n.HERO.SECONDARY_MESSAGE }</p>
-
-             <div class="flex gap-4">
-                <button class="w-[12rem] px-12 py-2 rounded-lg border bg-white flex items-center justify-between font">
-                    { i18n.HERO.BUTTON_1 }
-                    <ArrowRight class="w-6 h-6 inline-block" />
-                </button>
-                <button class="px-6 w-[12rem] py-2 rounded-lg border bg-black text-white font-semibold">{ i18n.HERO.BUTTON_2 }</button>
-             </div>
-        </section>
-
-        <section class="relative">
-            <div class="absolute right-0 top-52">
-                <a href="#test" class="text-sm flex gap-2 items-center">
-                    { i18n.HERO.SCROLL_MESSAGE }
-                    <ArrowDown />
-                </a>
-            </div>
-        </section>
+        <Hero />
     </main>
 </Layout>
 
