@@ -1,22 +1,28 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Arrow from '@/icons/arrow-down.astro'
 
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { getI18N } from "@/i18n";
 
-const lang = getLangFromUrl(Astro.url);
-const translations = useTranslations(lang);
+const { currentLocale  } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
-<header class="flex justify-between">
-    <h1>🐈‍⬛ devoncats</h1>
+<header class="flex items-center justify-between px-36 py-2">
+    <h1 class="text-2xl w-64 font-serif">devoncats.</h1>
 
     <nav>
-        <ul class="flex">
-            <li>{ translations('nav.about') }</li>
-            <li>{ translations('nav.skills') }</li>
-            <li>{ translations('nav.projects') }</li>
+        <ul class="flex gap-4 text-gray-700 transition-colors delay-300">
+            <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.ABOUT }</a></li>
+            <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.SKILLS }</a></li>
+            <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.PROJECTS }</a></li>
         </ul>
     </nav>
 
-    <button>Lets's talk</button>
+    <!-- Language selector || React Component -->
+    <div class="w-64 flex justify-end">
+        <button class='border inline-flex items-center text-sm px-4 py-1 gap-2 rounded-lg'>
+            { currentLocale === 'en' ? 'EN' : 'ES'}
+            <Arrow />
+        </button>
+    </div>
 </header>

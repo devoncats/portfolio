@@ -1,0 +1,15 @@
+{
+    "HEADER": {
+        "ABOUT": "About Me",
+        "SKILLS": "Skills",
+        "PROJECTS": "Projects"
+    },
+    "HERO": {
+        "GREETING": "Hi! I'm",
+        "MAIN_MESSAGE": "Creating & building more than software",
+        "SECONDARY_MESSAGE": "Passionate about creating seamless and efficient web applications. Let's build something amazing together!",
+        "BUTTON_1": "Let's Talk",
+        "BUTTON_2": "Curriculum Vitae",
+        "SCROLL_MESSAGE": "Scroll down to learn more"
+    }
+}

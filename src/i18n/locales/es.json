@@ -1,0 +1,15 @@
+{
+    "HEADER": {
+        "ABOUT": "Sobre mi",
+        "SKILLS": "Habilidades",
+        "PROJECTS": "Proyectos"
+    },
+    "HERO": {
+        "GREETING": "Hola! soy",
+        "MAIN_MESSAGE": "Creando y construyendo mas que software",
+        "SECONDARY_MESSAGE": "Nos apasiona crear aplicaciones web eficientes y sin problemas. ¡Construyamos algo increíble juntos!",
+        "BUTTON_1": "Hablemos",
+        "BUTTON_2": "Curriculo",
+        "SCROLL_MESSAGE": "Desplácese para saber más"
+    }
+}

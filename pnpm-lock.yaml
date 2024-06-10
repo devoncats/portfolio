@@ -11,6 +11,12 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.10.1)(tailwindcss@3.4.4)
+  '@fontsource/poppins':
+    specifier: ^5.0.14
+    version: 5.0.14
+  '@fontsource/prata':
+    specifier: ^5.0.19
+    version: 5.0.19
   astro:
     specifier: ^4.10.1
     version: 4.10.1(typescript@5.4.5)
@@ -850,6 +856,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/poppins@5.0.14:
+    resolution: {integrity: sha512-nmM1zpPo3Uh4JcGAVSQuWaZNYh2FbbwWhZ5t6hRaynmJaNTBW85d3nEh9zMmzI0HX7X5xqQVdRHeDatKpOGsnA==}
+    dev: false
+
+  /@fontsource/prata@5.0.19:
+    resolution: {integrity: sha512-XhEDrkZ4aZfhFSy2sDmTE6S8j1S/MAHQIr2vNxTxu2ivoq/kIEYilgD4/WRuKpAaMX91/AjAmq2todRoLTCiag==}
+    dev: false
 
   /@img/sharp-darwin-arm64@0.33.4:
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
