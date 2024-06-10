@@ -7,12 +7,12 @@ const { currentLocale  } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<header class="flex items-center justify-between px-36 py-2 h-[6vh]">
-    <h1 class="text-2xl w-64 font-serif">devoncats.</h1>
+<header class="flex items-center justify-between px-36 py-2 h-[6vh] sticky top-0 bg-white z-30">
+    <h1 class="text-2xl w-64 font-serif"><a href="#hero">devoncats.</a></h1>
 
     <nav>
         <ul class="flex gap-4 text-gray-700 transition-colors delay-300">
-            <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.ABOUT }</a></li>
+            <li><a class="text-sm hover:text-black" href="#about">{ i18n.HEADER.ABOUT }</a></li>
             <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.SKILLS }</a></li>
             <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.PROJECTS }</a></li>
         </ul>

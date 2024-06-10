@@ -11,5 +11,10 @@
         "BUTTON_1": "Let's Talk",
         "BUTTON_2": "Curriculum Vitae",
         "SCROLL_MESSAGE": "Scroll down to learn more"
+    },
+    "ABOUT": {
+        "TITLE": "About Me",
+        "MESSAGE_1": "Hello! I'm Jose Vasquez, a passionate and dedicated full stack developer with expertise in JavaScript, PostgreSQL, Java, and React. With a strong foundation in both front-end and back-end development, I create seamless and efficient web applications that meet user needs and business goals.",
+        "MESSAGE_2": "Beyond my technical abilities, I excel in time management and teamwork. I believe in the power of collaboration and strive to contribute positively to every project and team I'm a part of. Whether it's meeting tight deadlines or working seamlessly with cross-functional teams, I bring a balanced approach that combines technical excellence with effective communication and organizational skills."
     }
 }

@@ -1,6 +1,6 @@
 {
     "HEADER": {
-        "ABOUT": "Sobre mi",
+        "ABOUT": "Sobre mí",
         "SKILLS": "Habilidades",
         "PROJECTS": "Proyectos"
     },
@@ -9,7 +9,12 @@
         "MAIN_MESSAGE": "Creando y construyendo mas que software",
         "SECONDARY_MESSAGE": "Nos apasiona crear aplicaciones web eficientes y sin problemas. ¡Construyamos algo increíble juntos!",
         "BUTTON_1": "Hablemos",
-        "BUTTON_2": "Curriculo",
+        "BUTTON_2": "Currículo",
         "SCROLL_MESSAGE": "Desplácese para saber más"
+    },
+    "ABOUT": {
+        "TITLE": "Sobre mí",
+        "MESSAGE_1": "¡Hola! Soy José Vásquez, un apasionado y dedicado desarrollador full stack con experiencia en JavaScript, PostgreSQL, Java y React. Con una base sólida en el desarrollo front-end y back-end, creo aplicaciones web fluidas y eficientes que satisfacen las necesidades del usuario y los objetivos de negocio.",
+        "MESSAGE_2": "Más allá de mis capacidades técnicas, destaco en la gestión del tiempo y el trabajo en equipo. Creo en el poder de la colaboración y me esfuerzo por contribuir positivamente a cada proyecto y equipo del que formo parte. Tanto si se trata de cumplir plazos ajustados como de trabajar sin problemas con equipos multifuncionales, aporto un enfoque equilibrado que combina la excelencia técnica con una comunicación eficaz y habilidades organizativas."
     }
 }
