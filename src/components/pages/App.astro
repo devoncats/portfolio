@@ -4,15 +4,8 @@ import Hero from '../Hero.astro';
 
 import { getI18N } from "@/i18n";
 
-import GithubIcon from '@/icons/github.astro';
-import LinkedinIcon from '@/icons/linkedin.astro';
-import TwitterIcon from '@/icons/twitter.astro';
-import InstagramIcon from '@/icons/instagram.astro';
-
-import { Image } from 'astro:assets';
-import Jose from '@/resources/jose-vasquez.jpg';
-
 import ArrowDown from '@/icons/arrow-down.astro'
+import About from '../About.astro';
 
 const { currentLocale  } = Astro
 const i18n = getI18N({ currentLocale })
@@ -33,25 +26,42 @@ const i18n = getI18N({ currentLocale })
         </div>
     </section>
 
-    <article id="about" class='px-36 py-12 flex flex-col items-center gap-16'>
-        <h1 class="font-serif text-4xl">{ i18n.ABOUT.TITLE }</h1>
-        
-        <section class="flex justify-between">
-            <Image src={Jose} alt="Devoncats" class='w-[30%] h-[30%] rounded-ss-[12rem] rounded-3xl shadow' />
-            
-            <div class="w-1/2 flex flex-col gap-8">
-                <p>{ i18n.ABOUT.MESSAGE_1 }</p>   
-                <p>{ i18n.ABOUT.MESSAGE_2 }</p>
-                    
-                <div class="flex gap-4">
-                    <a href="https://linkedin.com/in/jose-ignacio-vasquez" class="border px-4 py-2 rounded-lg"><LinkedinIcon /></a>
-                    <a href="https://github.com/devoncats" class="border px-4 py-2 rounded-lg"><GithubIcon /></a>
-                    <a href="https://x.com/Alox2809" class="border px-4 py-2 rounded-lg"><TwitterIcon /></a>
-                    <a href="https://www.instagram.com/silly.jivr/" class="border px-4 py-2 rounded-lg"><InstagramIcon /></a>
+    <About />
+
+    <article id="hero" class="h-[50vh] flex flex-col items-center px-36 py-16 gap-16">
+        <h2 class="font-serif text-4xl">Skills</h2>
+
+        <section class="flex flex-col w-full gap-y-8">
+            <div class="flex gap-x-8 w-full justify-between">
+                <div class="border px-8 py-4 w-[20vw]">
+                    Text
+                </div>
+    
+                <div class="border px-8 py-4 w-[20vw]">
+                    Text
+                </div>
+    
+                <div class="border px-8 py-4 w-[20vw]">
+                    Text
+                </div>
+            </div>
+
+            <div class="flex gap-x-8 justify-between">
+                <div class="border px-8 py-4 w-[20vw]">
+                    Text
+                </div>
+    
+                <div class="border px-8 py-4 w-[20vw]">
+                    Text
+                </div>
+    
+                <div class="border px-8 py-4 w-[20vw]">
+                    Text
                 </div>
             </div>
         </section>
     </article>
+
 </Layout>
 
 <style>
