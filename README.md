@@ -1,12 +1,6 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">devoncats.dev</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
-
-<br/>
+<h1 align="center">
+  Portfolio Website
+</h1>
 
 <center>
 
@@ -14,28 +8,24 @@
 
 </center>
 
-## TL;DR
+## TL:DR
+This is the repository for my portfolio that you can findd at this [link](https://devoncats.dev). You can fork, clone and copy from this project to use it as you like 💖.
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
 
 ## Built With
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My portfolio highlights the projects I've completed in programming. Explore all the project repositories on my GitHub for a comprehensive view of my work.
 
-This project was built using these technologies.
+This project was built using these technologies:
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+- Astro
+- Tailwind
+- React
+- Typescript
 
 ## Features
 
-**📖 Multi-Page Layout**
-
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+**🎨 Styled with tailwind**
 
 **📱 Fully Responsive**
 
@@ -45,21 +35,19 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 
 ## 🛠 Installation and Setup Instructions
 
-1. Installation: `npm install`
+1. Clone the git repository
 
-2. In the project directory, you can run: `npm start`
+2. Instal the dependencies: `pnpm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+3. Run it with: `pnpm run dev`
+
+4. Open [http://localhost:4321](http://localhost:4321) to view it in the browser.
 
 ## Usage Instructions
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+Open the project folder and Navigate to `/src/` to find all the project files. <br/>
+You will find all the components, icons and more used and you can edit your information accordingly. <br/>
 
 ### Show your support
 
-Give a ⭐ if you like this website!
-
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+Give me a ⭐ if you like this website!
