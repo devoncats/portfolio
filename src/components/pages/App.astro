@@ -1,26 +1,28 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import Hero from '../Hero.astro';
+import Layout from "@/layouts/Layout.astro";
+import Hero from "../Hero.astro";
 
 import { getI18N } from "@/i18n";
 
-import ArrowDown from '@/icons/arrow-down.astro'
-import About from '../About.astro';
+import ArrowDown from "@/icons/arrow-down.astro";
+import About from "../About.astro";
 
-const { currentLocale  } = Astro
-const i18n = getI18N({ currentLocale })
-
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
-<Layout title='devoncats | Fullstack Developer'>
-	<main id="hero" class="px-36 pt-36 pb-64 h-[94vh] flex flex-col justify-around">
+<Layout title="devoncats | Fullstack Developer">
+    <main
+        id="hero"
+        class="px-36 pt-36 pb-64 h-[94vh] flex flex-col justify-around"
+    >
         <Hero />
     </main>
 
     <section class="relative">
         <div class="absolute right-16 -translate-y-12">
             <a href="#about" class="text-sm flex gap-2 items-center">
-                { i18n.HERO.SCROLL_MESSAGE }
+                {i18n.HERO.SCROLL_MESSAGE}
                 <ArrowDown />
             </a>
         </div>
@@ -28,47 +30,40 @@ const i18n = getI18N({ currentLocale })
 
     <About />
 
-    <article id="hero" class="h-[50vh] flex flex-col items-center px-36 py-16 gap-16">
-        <h2 class="font-serif text-4xl">Skills</h2>
+    <article
+        id="hero"
+        class="h-[50vh] flex flex-col items-center px-36 py-16 gap-16"
+    >
+        <h2 class="font-serif text-4xl">Skills</h2> 
 
-        <section class="flex flex-col w-full gap-y-8">
-            <div class="flex gap-x-8 w-full justify-between">
-                <div class="border px-8 py-4 w-[20vw]">
-                    Text
-                </div>
-    
-                <div class="border px-8 py-4 w-[20vw]">
-                    Text
-                </div>
-    
-                <div class="border px-8 py-4 w-[20vw]">
-                    Text
-                </div>
-            </div>
+        <section class="grid grid-cols-[repeat(4,_1fr)] justify-between text-center w-3/4 gap-y-8 gap-x-8">
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> React</div>
 
-            <div class="flex gap-x-8 justify-between">
-                <div class="border px-8 py-4 w-[20vw]">
-                    Text
-                </div>
-    
-                <div class="border px-8 py-4 w-[20vw]">
-                    Text
-                </div>
-    
-                <div class="border px-8 py-4 w-[20vw]">
-                    Text
-                </div>
-            </div>
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> Tailwind</div>
+ 
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown />Astro</div>
+
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown />HTML</div>
+
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> CSS</div>
+
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown />JavaScript</div>
+
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> Java</div>
+
+            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> Git</div>
         </section>
     </article>
-
 </Layout>
 
 <style>
     #hero {
-    background-size: 40px 40px;
-     background-image:
-        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+        background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.03) 1px,
+                transparent 1px
+            ),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     }
 </style>
