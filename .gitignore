@@ -4,6 +4,12 @@ dist/
 # generated types
 .astro/
 
+# specific from firebase
+.firebase/
+.github/
+.firebaserc
+firebase.json
+
 # dependencies
 node_modules/
 
@@ -22,3 +28,5 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+pnpm-lock.yaml
