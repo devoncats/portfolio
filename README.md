@@ -46,6 +46,6 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 Open the project folder and Navigate to `/src/` to find all the project files. <br/>
 You will find all the components, icons and more used and you can edit your information accordingly. <br/>
 
-### Show your support
+## Show your support
 
 Give me a ⭐ if you like this website!
