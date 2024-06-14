@@ -2,14 +2,12 @@
   Portfolio Website
 </h1>
 
-<center>
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build) &nbsp;       
 
-</center>
 
 ## TL:DR
-This is the repository for my portfolio that you can findd at this [link](https://devoncats.dev). You can fork, clone and copy from this project to use it as you like 💖.
+This is the repository for my portfolio that you can find at this [link](https://devoncats.dev). You can fork, clone and copy from this project to use it as you like 💖.
 
 
 ## Built With
