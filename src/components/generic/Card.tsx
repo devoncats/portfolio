@@ -28,10 +28,10 @@ const SkillCard: React.FC<Props> = ({ skill }) => {
     const Icon = iconMap[skill] || null
 
     return (
-        <div className="flex gap-4 px-8 py-2 items-center border bg-white rounded-lg">
+        <li className="flex gap-4 px-8 py-4 items-center border bg-white rounded-lg">
             {Icon}
             {skill}
-        </div>
+        </li>
     )
 }
 

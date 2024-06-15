@@ -29,7 +29,7 @@ const skills = [
 <Layout title="devoncats | Fullstack Developer">
     <main
         id="hero"
-        class="px-36 pt-36 pb-64 h-[94vh] flex flex-col justify-around"
+        class="px-36 pt-36 pb-64 h-screen flex flex-col justify-around"
     >
         <Hero />
     </main>
@@ -45,16 +45,19 @@ const skills = [
 
     <About />
 
-    <article
-        id="hero"
-        class="h-[50vh] flex flex-col items-center px-36 py-16 gap-16"
-    >
+    <article id='skills' class="flex flex-col items-center px-36 py-16 gap-16">
         <h2 class="font-serif text-4xl">Skills</h2> 
 
-        <section class="grid grid-cols-[repeat(3,_12rem)] justify-between text-center w-3/4 gap-y-8 gap-x-8">
+        <section class="w-full overflow-hidden mask">
+            <ul class="flex gap-4 py-4 scroll w-fit">
             {
                 skills.map((skill) => (<Card skill={skill} client:visible />))
             }
+            {
+                skills.map((skill) => (<Card skill={skill} client:visible />))
+
+            }
+            </ul>
         </section>
     </article>
 </Layout>
@@ -68,5 +71,29 @@ const skills = [
                 transparent 1px
             ),
             linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    }
+
+    .mask {
+        mask: linear-gradient(
+            90deg,
+            transparent,
+            white 20%,
+            white 95%,
+            transparent
+        );
+    }
+
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 0.5rem));
+        }
+    }
+
+    .scroll {
+        animation: scroll 20s linear infinite;
+    }
+
+    .scroll:hover {
+        animation-play-state: paused;
     }
 </style>

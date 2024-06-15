@@ -1,28 +1,42 @@
 ---
-import Arrow from '@/icons/arrow-down.astro'
-
 import { getI18N } from "@/i18n";
 
-const { currentLocale  } = Astro
+const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<header class="flex items-center justify-between px-36 py-2 h-[6vh] sticky top-0 bg-white z-30">
+<header class="flex items-center justify-between px-36 py-2 h-[6vh] fixed top-0 w-screen bg-white z-30 border-b">
     <h1 class="text-2xl w-64 font-serif"><a href="#hero">devoncats.</a></h1>
 
     <nav>
-        <ul class="flex gap-4 text-gray-700 transition-colors delay-300">
+        <ul class="flex gap-4 text-gray-700 transition-colors delay-300 ">
             <li><a class="text-sm hover:text-black" href="#about">{ i18n.HEADER.ABOUT }</a></li>
-            <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.SKILLS }</a></li>
-            <li><a class="text-sm hover:text-black" href="/#">{ i18n.HEADER.PROJECTS }</a></li>
+            <li><a class="text-sm hover:text-black" href="#skills">{ i18n.HEADER.SKILLS }</a></li>
+            <li><a class="text-sm hover:text-black" href="#projects">{ i18n.HEADER.PROJECTS }</a></li>
         </ul>
     </nav>
 
     <!-- Language selector || React Component -->
-    <div class="w-64 flex justify-end">
-        <button class='border inline-flex items-center text-sm px-4 py-1 gap-2 rounded-lg'>
-            { currentLocale === 'en' ? 'EN' : 'ES'}
-            <Arrow />
-        </button>
+    <div class="w-64">
+        <div class="flex justify-end border px-1 rounded-lg w-fit">
+            <select id="language" class='inline-flex items-center text-sm py-1 px-2'>
+                {currentLocale === 'en' ? <option value="en" selected>EN</option> : <option value="en">EN</option>}
+                {currentLocale === 'es' ? <option value="es" selected>ES</option> : <option value="es">ES</option>}
+            </select>
+        </div>
     </div>
 </header>
+
+<script>
+    import { getRelativeLocaleUrl } from "astro:i18n"
+
+    const languageSelector = document.querySelector("#language") as HTMLSelectElement;
+    
+    if (languageSelector) {
+        languageSelector.addEventListener('change', () => {
+            const newLanguage = languageSelector.value
+        
+            document.location.href = getRelativeLocaleUrl(newLanguage)
+        })
+    }
+</script>
