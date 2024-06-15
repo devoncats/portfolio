@@ -6,9 +6,22 @@ import { getI18N } from "@/i18n";
 
 import ArrowDown from "@/icons/arrow-down.astro";
 import About from "../About.astro";
+import SkilllCard from "../SkilllCard.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+
+const skills = [
+    "React",
+    "Tailwind",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Java",
+    "Postgresql",
+    "Astro",
+    "Git"
+]
 ---
 
 <Layout title="devoncats | Fullstack Developer">
@@ -36,22 +49,10 @@ const i18n = getI18N({ currentLocale });
     >
         <h2 class="font-serif text-4xl">Skills</h2> 
 
-        <section class="grid grid-cols-[repeat(4,_1fr)] justify-between text-center w-3/4 gap-y-8 gap-x-8">
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> React</div>
-
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> Tailwind</div>
- 
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown />Astro</div>
-
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown />HTML</div>
-
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> CSS</div>
-
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown />JavaScript</div>
-
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> Java</div>
-
-            <div class="border px-8 py-4 bg-white flex items-center justify-center gap-2"><ArrowDown /> Git</div>
+        <section class="grid grid-cols-[repeat(3,_1fr)] justify-between text-center w-3/4 gap-y-8 gap-x-8">
+            {
+                skills.map((skill) => (<SkilllCard skill={skill} />))
+            }
         </section>
     </article>
 </Layout>
