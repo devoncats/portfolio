@@ -17,8 +17,8 @@ const i18n = getI18N({ currentLocale })
     </nav>
 
     <!-- Language selector || React Component -->
-    <div class="w-64">
-        <div class="flex justify-end border px-1 rounded-lg w-fit">
+    <div class="w-64 flex justify-end">
+        <div class="border px-1 rounded-lg w-fit">
             <select id="language" class='inline-flex items-center text-sm py-1 px-2'>
                 {currentLocale === 'en' ? <option value="en" selected>EN</option> : <option value="en">EN</option>}
                 {currentLocale === 'es' ? <option value="es" selected>ES</option> : <option value="es">ES</option>}
