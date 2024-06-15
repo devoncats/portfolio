@@ -12,15 +12,42 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 const skills = [
-    "React",
-    "Tailwind",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Java",
-    "Postgresql",
-    "Astro",
-    "Git"
+    {
+        "name": "React",
+        "color": "blue"
+    },
+    {
+        "name": "Tailwind",
+        "color": "sky"
+    },
+    {
+        "name": "HTML",
+        "color": "orange"
+    },
+    {
+        "name": "CSS",
+        "color": "cyan"
+    },
+    {
+        "name": "JavaScript",
+        "color": "orange"
+    },
+    {
+        "name": "Java",
+        "color": "red"
+    },
+    {
+        "name": "Postgresql",
+        "color": "blue"
+    },
+    {
+        "name": "Astro",
+        "color": "orange"
+    },
+    {
+        "name": "Git",
+        "color": "orange"
+    }
 ]
 ---
 
@@ -47,12 +74,12 @@ const skills = [
         <h2 class="font-serif text-4xl">Skills</h2> 
 
         <section class="w-full overflow-hidden mask">
-            <ul class="flex gap-4 py-4 scroll w-fit">
+            <ul class="flex gap-12 py-4 scroll w-fit">
             {
-                skills.map((skill) => (<Card skill={skill} client:visible />))
+                skills.map((skill) => (<Card skill={skill.name} color={skill.color} client:visible />))
             }
             {
-                skills.map((skill) => (<Card skill={skill} client:visible />))
+                skills.map((skill) => (<Card skill={skill.name} color={skill.color} client:visible />))
 
             }
             </ul>
@@ -83,12 +110,12 @@ const skills = [
 
     @keyframes scroll {
         to {
-            transform: translate(calc(-50% - 0.5rem));
+            transform: translate(calc(-50% - 1.5rem));
         }
     }
 
     .scroll {
-        animation: scroll 20s linear infinite;
+        animation: scroll 25s linear infinite;
     }
 
     .scroll:hover {

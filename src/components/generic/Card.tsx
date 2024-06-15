@@ -10,6 +10,7 @@ import GitIcon from "@/icons/git"
 
 interface Props {
     skill: string
+    color: string
 }
 
 const iconMap: { [key: string]: React.ReactNode } = {
@@ -24,14 +25,15 @@ const iconMap: { [key: string]: React.ReactNode } = {
     Git: <GitIcon />
 }
 
-const SkillCard: React.FC<Props> = ({ skill }) => {
+const SkillCard: React.FC<Props> = ({ skill, color }) => {
     const Icon = iconMap[skill] || null
 
     return (
-        <li className="flex gap-4 px-8 py-4 items-center border bg-white rounded-lg">
+        <li className={`flex gap-4 transition-all delay-75 text-xl px-8 py-4 items-center border rounded-lg hover:cursor-pointer hover:bg-${color}-400/40 hover:shadow-glow hover:text-${color}-600 hover:shadow-${color}-400/40 hover:border-${color}-400/40`}>
             {Icon}
             {skill}
         </li>
+
     )
 }
 
