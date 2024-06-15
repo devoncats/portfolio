@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "es2015",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "strict": true,
     "baseUrl": ".",
     "paths": {
@@ -18,7 +18,11 @@
       "@/icons": [
         "src/icons/*"
       ],
+      "@/generic": [
+        "src/components/generic/*"
+      ]
     },
+    "jsxImportSource": "react"
   },
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/strict"
 }

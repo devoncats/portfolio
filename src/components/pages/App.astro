@@ -6,8 +6,10 @@ import { getI18N } from "@/i18n";
 
 import ArrowDown from "@/icons/arrow-down.astro";
 import About from "../About.astro";
-import SkilllCard from "../SkilllCard.astro";
+import Card from "../generic/Card";
 
+import ReactIcon from '@/icons/react.jsx'
+ 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
@@ -49,9 +51,9 @@ const skills = [
     >
         <h2 class="font-serif text-4xl">Skills</h2> 
 
-        <section class="grid grid-cols-[repeat(3,_1fr)] justify-between text-center w-3/4 gap-y-8 gap-x-8">
+        <section class="grid grid-cols-[repeat(3,_12rem)] justify-between text-center w-3/4 gap-y-8 gap-x-8">
             {
-                skills.map((skill) => (<SkilllCard skill={skill} />))
+                skills.map((skill) => (<Card skill={skill} client:visible />))
             }
         </section>
     </article>
